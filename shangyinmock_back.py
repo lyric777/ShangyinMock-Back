@@ -27,6 +27,32 @@ flag = 0
 
 @app.route('/use_api/<api>')
 def use_api(api):
+    '''
+    dkjiejuh = ['207210410003154', 'AP7CD4EDozF5ISnutPVeal65PgPfm0', '578169136352940173174852605741', 'IkhfawWybQTRfusJmZlsBXPkQutDab', '']
+    hetongbh = ['22476386404305218315240479965629', 'jht5GPtPKD7ijvi0HHEahhzeTRpV3lCv', 'abrnwqCzMmjFIpfvehnvJsoYLtqkaZtH', 'L1572071780202008190947169887', '', None]
+    huobdhao = ['156', '300', '0', '', None]
+    huankjee =  [-100, 0.0, 3455, 9999999999, None]
+    huankzhh = ['03003867117', '70435825006818224895468822378471', 'XZhbypZhbLDc5pS1l2sNpMezWQNsfnqd', '', None]
+    huakzhgs = ['', None, '1', '2', '0', '11']
+    tqhkhxfs = ['', None, '0', '1', '2', '3', '4', '21']
+    huakzhlx = ['', None, 'C', 'A', 'I', 'P', 'E', 'q', 'at']
+    hukzhmch = ['', None, '2JTZN29ywJ9lccWrFthxwc1M0GYmIk2C76P9u6fE', '上海汽车集团财务有限责任公司']
+    hukzhkhh = ['nvTRKItaClUPgbFQtsksovKduBTmuZdB', '', None, '上海银行天山支行']
+    hkbeizhu = ['HG58saCK6iLNDZSCaklTSMpePEUCfr', '', None]
+    result = []
+    for i in dkjiejuh:
+        for j in hetongbh:
+            for k in huobdhao:
+                for m in huankjee:
+                    for n in huankzhh:
+                        for n1 in huakzhgs:
+                            for n2 in tqhkhxfs:
+                                for n3 in huakzhlx:
+                                    for n4 in hukzhmch:
+                                        for n5 in hukzhkhh:
+                                            for n6 in hkbeizhu:
+                                                result.append({'dkjiejuh': i, 'hetongbh': j, 'huobdhao': k, 'huankjee': m, 'huankzhh': n, 'huakzhgs': n1, 'tqhkhxfs': n2, 'huakzhlx': n3, 'hukzhmch': n4, 'hukzhkhh': n5, 'hkbeizhu':n6})
+    '''
     comname = ['sjfhu', '', 'sdfghjkiuytvb']
     rolldate = ['', '20200913', '20190901', '20290913']
     type = ['001', '002', '010', '0', '']
@@ -168,7 +194,7 @@ def get_api_result():
          "options": "", "required": "是", "default": "''", "fixed_value": "", "enumeration": "['207210410003154', 'AP7CD4EDozF5ISnutPVeal65PgPfm0', '578169136352940173174852605741', 'IkhfawWybQTRfusJmZlsBXPkQutDab', '']"},
         {"key": "2", "field": "hetongbh", "field_cn": "合同编号", "type": "string", "length": "32",
          "options": "",
-         "required": "否", "default": "''", "fixed_value": "", "enumeration": "['22476386404305218315240479965629', 'jht5GPtPKD7ijvi0HHEahhzeTRpV3lCv', 'abrnwqCzMmjFIpfvehnvJsoYLtqkaZtH', '', null]"},
+         "required": "否", "default": "''", "fixed_value": "", "enumeration": "['22476386404305218315240479965629', 'jht5GPtPKD7ijvi0HHEahhzeTRpV3lCv', 'abrnwqCzMmjFIpfvehnvJsoYLtqkaZtH', 'L1572071780202008190947169887', '', null]"},
         {"key": "3", "field": "huobdhao", "field_cn": "货币代号", "type": "string", "length": "3",
          "options": "156--人民币", "required": "是", "default": "", "fixed_value": "", "enumeration": "['156', '300', '0','', null]"},
         {"key": "4", "field": "huankjee", "field_cn": "还款金额", "type": "decimal",
@@ -176,10 +202,10 @@ def get_api_result():
          "options": "", "required": "是", "default": 0.0, "fixed_value": "", "enumeration": "[-100, 0.0, 3455, 9999999999, null]"},
         {"key": "5", "field": "huankzhh", "field_cn": "还款账号", "type": "string",
          "length": "32",
-         "options": "", "required": "是", "default": "''", "fixed_value": "", "enumeration": "一般传入借据对应的默认还款账号"},
+         "options": "", "required": "是", "default": "''", "fixed_value": "", "enumeration": "['03003867117', '70435825006818224895468822378471', 'XZhbypZhbLDc5pS1l2sNpMezWQNsfnqd', '', null]"},
         {"key": "6", "field": "huakzhgs", "field_cn": "还款账户归属", "type": "string",
          "length": "1",
-         "options": "1--T24\n2--互联网核心", "required": "是", "default": "", "fixed_value": "", "enumeration": "['', null], '1', '2', '0', '11']"},
+         "options": "1--T24\n2--互联网核心", "required": "是", "default": "", "fixed_value": "", "enumeration": "['', null, '1', '2', '0', '11']"},
         {"key": "7", "field": "tqhkhxfs", "field_cn": "提前还款还息方式", "type": "string",
          "length": "1",
          "options": "0-不还息\n1-部分还息\n2-全部还息\n3-优先还本", "required": "是", "default": "", "fixed_value": "",
@@ -191,13 +217,13 @@ def get_api_result():
          "enumeration": "['', null, 'C', 'A', 'I', 'P', 'E', 'q', 'at']"},
         {"key": "9", "field": "hukzhmch", "field_cn": "还款账户名称", "type": "string",
          "length": "384",
-         "options": "", "required": "否", "default": "", "fixed_value": "", "enumeration": "['', null, '2JTZN29ywJ9lccWrFthxwc1M0GYmIk2C76P9u6fE']"},
+         "options": "", "required": "否", "default": "", "fixed_value": "", "enumeration": "['', null, '2JTZN29ywJ9lccWrFthxwc1M0GYmIk2C76P9u6fE', '上海汽车集团财务有限责任公司']"},
         {"key": "10", "field": "hukzhkhh", "field_cn": "还款账户开户行", "type": "string",
          "length": "32",
-         "options": "", "required": "否", "default": "", "fixed_value": "", "enumeration": "['', null]"},
+         "options": "", "required": "否", "default": "", "fixed_value": "", "enumeration": "['nvTRKItaClUPgbFQtsksovKduBTmuZdB', '', null, '上海银行天山支行']"},
         {"key": "11", "field": "hkbeizhu", "field_cn": "还款备注", "type": "string",
          "length": "1500",
-         "options": "", "required": "否", "default": "", "fixed_value": "", "enumeration": "['', null]"}
+         "options": "", "required": "否", "default": "", "fixed_value": "", "enumeration": "['HG58saCK6iLNDZSCaklTSMpePEUCfr', '', null]"}
     ], "trade_name_cn": "贷款提前还款", "trade_id": "3266", "business_category": "1"}
     return jsonify(data)
 
